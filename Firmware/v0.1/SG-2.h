@@ -2,7 +2,8 @@
 #define PITCH_2             1
 #define ENV_1               2
 #define ENV_2               3
-#define MIN_ENV             0.009f
+#define ENV_THR_1           0.010f
+#define ENV_THR_2           0.020f
 #define MIN_POS             0.01f  
 #define PITCH_COEFF_A       0.91040486
 #define PITCH_COEFF_B       2.64052850

@@ -14,6 +14,7 @@ Configuration config =
 	{68, 73}	
 };
 float string_base_freq[2];
+bool env_hyst_flag[2];
 
 void AudioCallback(AudioHandle::InputBuffer in, AudioHandle::OutputBuffer out, size_t size)
 {
@@ -36,7 +37,9 @@ void AudioCallback(AudioHandle::InputBuffer in, AudioHandle::OutputBuffer out, s
 }
 
 int main(void)
-{
+{ 
+	env_hyst_flag[0] = env_hyst_flag[1] = false;
+
 	string_base_freq[0] = mtof((float)config.string_base_midi[0]);
 	string_base_freq[1] = mtof((float)config.string_base_midi[1]);
 
@@ -82,5 +85,22 @@ float GetEnv(int channel)
 	float env;
 
 	env = hw.adc.GetFloat(channel); 
-	if (env < MIN_ENV) return 0.f; else return env;
+	if(env_hyst_flag[channel-2])
+	{
+		if(env >= ENV_THR_2)
+		{
+			env_hyst_flag[channel-2] = false;
+		}
+		else env = 0.f;
+	}
+	else
+	{
+		if(env <= ENV_THR_1)
+		{
+			env_hyst_flag[channel-2] = true;
+			env = 0.f;
+		}
+	}
+	
+	return env;
 }
