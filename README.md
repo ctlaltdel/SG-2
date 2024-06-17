@@ -11,13 +11,17 @@ The synth is based around a Daisy Seed from Electrosmith, mounted in a custom PC
 
 Current status: 
 - Revision B of the main electronics board in production
-- Working on adapting the Op6 FM synth engine by @carlvp: https://github.com/carlvp/daisylab/tree/main/op6daisy
+- Working on adapting the Op6 FM synth engine by @carlvp: 
+
+https://github.com/carlvp/daisylab/tree/main/op6daisy
 
 Still to do:
-- Test cartridge port functionality0
+- Test cartridge port functionality
 - Add touch-sensitive pads to allow scale shifting up/down to mitigate the limitation of having only 2 strings
 - Add a touch control to toggle \'stringless\' playing of the pitch softpots
 
-Here\'s a video that hopefully gives some idea of what I'm aiming at: https://www.youtube.com/watch?v=BWaMOtsjMRc
+Here\'s a video that hopefully gives some idea of what I'm aiming at: 
+
+https://www.youtube.com/watch?v=BWaMOtsjMRc
 
 
