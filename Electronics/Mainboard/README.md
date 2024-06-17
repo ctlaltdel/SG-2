@@ -1,5 +1,5 @@
 
-###Credits
+### Credits
 
 - The idea to use constant current to drive the softpots (which allows two-finger hammer-ons and pull-offs) instead of voltage  came from this article:
 
