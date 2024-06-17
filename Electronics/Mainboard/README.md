@@ -9,7 +9,14 @@ https://paia.com/dual-ribbon-howto/
 
 https://electro-music.com/forum/topic-32246.html
 
-- The design of string envelope demodulation stage is based on the Sound Detector product from Sparkfun: 
+- The preamp and peak detector of string envelope demodulation stages are based on the Sound Detector product from Sparkfun: 
 
 https://www.sparkfun.com/products/12642
+
+Original schematic by Bryan Jacquot may be found at:
+
+https://cdn.sparkfun.com/assets/8/a/1/2/5/sound-detector-v11.pdf
+
+Note the schematic for this product is released under the Creative Commons
+Attribution Share-Alike 3.0 License: https://creativecommons.org/licenses/by-sa/3.0/
 
