@@ -22,7 +22,7 @@ else:
             v_start = PREAMBLE_SIZE+(i * VOICE_SIZE)
             v_stop = PREAMBLE_SIZE+((i+1) * VOICE_SIZE)
             v = sysex[v_start:v_stop]
-            v_name = str(i) + "_" + str(v[118:].decode("utf-8")).rstrip()
+            v_name = str(i) + "_" + (str(v[118:].decode("utf-8")).rstrip()).replace("/", "_")
             f_out = open(v_name, "wb")
             print("Writing voice file: ", v_name)
             f_out.write(v)
